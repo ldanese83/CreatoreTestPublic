@@ -3,6 +3,8 @@ Un'applicazione web per la **creazione e la stampa di test**, pensato per le scu
 
 Il codice lato server è scritto in **PHP**, mentre come database viene utilizzato **MySQL**.
 
+![Screenshot](dist/img/screen1.jpg)
+
 ## Struttura
 ### Cartella sql
 All'interno della cartella `sql` è possibile trovare un file sql che si può importare all'interno di un database con tutte le tabelle necessarie al funzionamento del programma.
