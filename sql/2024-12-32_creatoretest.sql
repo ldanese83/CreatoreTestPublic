@@ -2663,10 +2663,8 @@ CREATE TABLE `ct_utenti` (
 --
 
 INSERT INTO `ct_utenti` (`id_utente`, `nome`, `cognome`, `username`, `password`, `email`, `codice_conf`, `validato`, `fk_tipo_utente`, `ricevi_mail`) VALUES
-(1, 'Mario', 'Rossi', 'mrossi', '
-21232f297a57a5a743894a0e4a801fc3', '', '0', 1, 3, 0),
-(3, 'admin', 'admin', 'admin', '
-21232f297a57a5a743894a0e4a801fc3', '', 'uMEoH598', 1, 1, 0),
+(1, 'Mario', 'Rossi', 'mrossi', '21232f297a57a5a743894a0e4a801fc3', '', '0', 1, 3, 0),
+(3, 'admin', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', '', 'uMEoH598', 1, 1, 0),
 (5, 'Luigi', 'Bianchini', 'lbianchi', '6e6bc4e49dd477ebc98ef4046c067b5f', '1234@gmail.com', '', 1, 2, 0),
 (6, 'Carlo', 'Verdi', 'cverdi', 'ece8623b8092f7c07d07c65045fef179', 'cverdi@gmail.com', '', 1, 2, 0),
 (7, 'Elisa', 'Gialli', 'egialli', '9b8e501b75e049237e3ccf7e117cd4a3', 'egialli@gmail.com', '', 1, 2, 0),
