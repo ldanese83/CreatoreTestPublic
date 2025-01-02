@@ -1,0 +1,199 @@
+p {
+margin:0px;
+padding:0px;	
+}
+
+.logo_dalcero {
+	width:2cm;
+	height:1.9cm;
+}
+.logo_rep {
+	width:2cm;
+	height:1.9cm;
+}
+
+.logo_sx {
+	float:left;
+	text-align:center;
+	width:19%;
+	border-top:1px solid;
+	border-bottom:1px solid;
+	border-left:1px solid;
+}
+.logo_dx {
+	width:19%;
+	text-align:center;
+	border-top:1px solid;
+	border-bottom:1px solid;
+	border-right:1px solid;
+}
+.scritta_header{
+	width:60%;
+	float:left;
+	text-align:center;
+	font-family:Helvetica;
+	font-size:11pt;
+	height:1.9cm;
+	padding-top:10px;
+}
+
+#nome_cognome {
+	
+	display:block;
+	font-family:Helvetica;
+	font-size:9pt;
+	float:left;
+	width:50%;
+	margin-bottom:8px;
+	color:grey;
+	
+}
+
+#classe {
+	
+	display:block;
+	font-family:Helvetica;
+	font-size:9pt;
+	float:left;
+	width:25%;
+	margin-bottom:8px;
+	color:grey;
+	
+}
+
+#data {
+	
+	display:block;
+	font-family:Helvetica;
+	font-size:9pt;
+	float:left;
+	width:25%;
+	margin-bottom:8px;
+	color:grey;
+	
+}
+
+#titolo_quiz {
+	
+	clear:both;
+	font-family:Helvetica;
+	font-size:13pt;
+	width:100%;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	color:#5B9BD5;
+	
+}
+
+#domande  {
+	
+	display:block;
+	font-family:Helvetica;
+	font-size:12pt;
+	width:100%;
+	
+}
+
+.titolo_domanda  {
+	
+	display:block;
+	font-family:Helvetica;
+	font-size:11pt;
+	width:100%;
+	font-weight:bold;
+	padding-bottom:10px;
+	padding-top:10px;
+	
+}
+
+.domanda  {
+	
+	display:block;
+	font-family:Helvetica;
+	font-size:11pt;
+	width:100%;
+	padding-bottom:5px;
+	
+}
+
+.domanda_dsa  {
+	
+	display:block;
+	font-family:Helvetica;
+	font-size:12pt;
+	width:100%;
+	padding-bottom:10px;
+	
+}
+
+.risp_multipla  {
+	
+	display:block;
+	font-family:Helvetica;
+	font-size:9pt;
+	width:95%;
+	line-height:20px;
+	
+}
+
+.risp_multipla_dsa  {
+	
+	display:block;
+	font-family:Helvetica;
+	font-size:11pt;
+	width:95%;
+	line-height:35px;
+	
+}
+
+.spazio_risposta  {
+	
+	display:block;
+	font-family:Helvetica;
+	font-size:10pt;
+	width:100%;
+	padding-bottom:10px;
+	line-height:30px;
+	
+}
+
+.spazio_risposta_dsa  {
+	
+	display:block;
+	font-family:Helvetica;
+	font-size:11pt;
+	width:90%;
+	padding-bottom:15px;
+	line-height:40px;
+	
+}
+
+#table_footer {
+	width:100%;
+	margin-top:3em;
+	border-collapse:collapse;
+}
+
+#table_footer th {
+	font-family:Helvetica;
+	font-size:9pt;
+	font-weight:bold;
+	padding-bottom:8px;
+}
+
+#table_footer td {
+	width:33%;
+	height:40px;
+	background-color:#ededed;
+	border-top: 2px solid #c9c9c9;
+	border-bottom: 1.5px solid #c9c9c9;
+	border-left: 1px solid #c9c9c9;
+	border-right: 1px solid #c9c9c9;
+}
+
+#griglia {
+	
+	margin-top:40px;
+	
+}

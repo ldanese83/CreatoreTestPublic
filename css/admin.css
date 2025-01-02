@@ -1,0 +1,152 @@
+.label_form_domande {
+	padding-left:2em;
+	padding-top:1em;
+	padding-bottom:1em;
+}
+
+.textarea_form_domande{
+	padding-left:2em;
+	padding-top:1em;
+	padding-bottom:1em;
+}
+
+.select_form_domande{
+	padding-left:1em;
+	padding-right:1em;
+	padding-top:1em;
+	padding-bottom:1em;
+}
+
+.even{
+	background-color:#dedede;
+}
+
+.odd{
+	background-color:#eeeeee;
+}
+
+.green{
+	background-color:#66fa55;
+}
+
+.azzurro{
+	background-color:lightblue;
+}
+
+.red{
+	background-color:#aa0800;
+	color:white;
+}
+
+.table_classi {
+}
+
+.div_table {
+	width:80%;
+	margin:auto;
+}
+
+.first_td {
+	width:84%;
+}
+
+.img_td {
+	width:350px;
+	height:260px;
+}
+
+.second_td {
+	width:40%;
+}
+
+.third_td {
+	font-weight:bold;
+	color:red;
+}
+
+.slide_td {
+
+}
+
+.button_td{
+	text-align:center;
+}
+
+.panel-primary > .panel-heading {
+    color: #FFF;
+    background-color: #fcba03;
+    border-color: #fcba03;
+}
+
+.panel-primary {
+    border-color: #fcba03;
+}
+
+a:focus, a:hover {
+    color: #a37905;
+    text-decoration: underline;
+}
+a {
+    color: #fcba03;
+    text-decoration: none;
+}
+
+.table_admin {
+	width:50%;
+}
+
+.user_admin_title {
+	background-color:rgb(187, 144, 189);
+	color:white;
+	font-size:12pt;
+	font-weight:bold;
+	width:30%;
+}
+
+.user_admin {
+	background-color:#efefef;
+	text-align:center;
+}
+
+.button_admin{
+	width:15%;
+	text-align:center;
+}
+
+.label_pass {
+	background-color:rgb(187, 144, 189);
+	color:white;
+	font-size:12pt;
+	font-weight:bold;
+	margin-right:10px;
+	padding:10px;
+}
+
+#nuova_pass {
+	border-color:#efefef;
+	box-shadow: 4px 4px 2px rgb(187, 144, 189);
+	border-radius: 10px;
+	padding:10px;
+	margin-right:10px;
+}
+
+#cksubmit {
+	margin-top:20px;
+	margin-bottom:50px;
+	width:100px;
+}
+
+.btn-black{color:#fff;background-color:#666666;border-color:#cccccc}
+.btn-black:hover,.btn-black:focus,.btn-black.focus,.btn-black:active,.btn-black.active,.open>.dropdown-toggle.btn-black{color:#fff;background-color:#999999;border-color:#cccccc}
+.btn-black:active,.btn-black.active,.open>.dropdown-toggle.btn-black{background-image:none}
+.btn-black.disabled,.btn-black[disabled],fieldset[disabled] .btn-black,.btn-black.disabled:hover,.btn-black[disabled]:hover,fieldset[disabled] .btn-black:hover,.btn-black.disabled:focus,.btn-black[disabled]:focus,fieldset[disabled] .btn-black:focus,.btn-black.disabled.focus,.btn-black[disabled].focus,fieldset[disabled] .btn-black.focus,.btn-black.disabled:active,.btn-black[disabled]:active,fieldset[disabled] .btn-black:active,.btn-black.disabled.active,.btn-black[disabled].active,fieldset[disabled] .btn-black.active{background-color:#999999;border-color:#cccccc}.btn-black .badge{color:#fff;background-color:#999999}
+
+.btn-yellow{color:#fff;background-color:#209990;border-color:#17827a}
+.btn-yellow:hover,.btn-yellow:focus,.btn-yellow.focus,.btn-yellow:active,.btn-yellow.active,.open>.dropdown-toggle.btn-yellow{color:#fff;background-color:#0c8c83;border-color:#17827a}
+.btn-yellow:active,.btn-yellow.active,.open>.dropdown-toggle.btn-yellow{background-image:none}
+.btn-yellow.disabled,.btn-yellow[disabled],fieldset[disabled] .btn-yellow,.btn-yellow.disabled:hover,.btn-yellow[disabled]:hover,fieldset[disabled] .btn-yellow:hover,.btn-yellow.disabled:focus,.btn-yellow[disabled]:focus,fieldset[disabled] .btn-yellow:focus,.btn-yellow.disabled.focus,.btn-yellow[disabled].focus,fieldset[disabled] .btn-yellow.focus,.btn-yellow.disabled:active,.btn-yellow[disabled]:active,fieldset[disabled] .btn-yellow:active,.btn-yellow.disabled.active,.btn-yellow[disabled].active,fieldset[disabled] .btn-yellow.active{background-color:#0c8c83;border-color:#17827a}.btn-yellow .badge{color:#fff;background-color:#0c8c83}
+
+.btn-violet{color:#fff;background-color:#af01a3;border-color:#db04cc}
+.btn-violet:hover,.btn-violet:focus,.btn-violet.focus,.btn-violet:active,.btn-violet.active,.open>.dropdown-toggle.btn-violet{color:#fff;background-color:#9b1291;border-color:#db04cc}
+.btn-violet:active,.btn-violet.active,.open>.dropdown-toggle.btn-violet{background-image:none}
+.btn-violet.disabled,.btn-violet[disabled],fieldset[disabled] .btn-violet,.btn-violet.disabled:hover,.btn-violet[disabled]:hover,fieldset[disabled] .btn-violet:hover,.btn-violet.disabled:focus,.btn-violet[disabled]:focus,fieldset[disabled] .btn-violet:focus,.btn-violet.disabled.focus,.btn-violet[disabled].focus,fieldset[disabled] .btn-violet.focus,.btn-violet.disabled:active,.btn-violet[disabled]:active,fieldset[disabled] .btn-violet:active,.btn-violet.disabled.active,.btn-violet[disabled].active,fieldset[disabled] .btn-violet.active{background-color:#9b1291;border-color:#db04cc}.btn-violet .badge{color:#fff;background-color:#9b1291}

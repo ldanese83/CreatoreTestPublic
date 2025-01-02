@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Stile 1: Bordi arrotondati con ombra */
+    .stile-1 {
+      border-radius: 15px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+      border: 5px solid #ccc;
+      width: 300px;
+    }
+
+    /* Stile 2: Cornice con bordo doppio */
+    .stile-2 {
+      border: 5px double #000;
+      width: 300px;
+      padding: 10px;
+    }
+
+    /* Stile 3: Ombra profonda */
+    .stile-3 {
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+      width: 300px;
+    }
+
+    /* Stile 4: Effetto riflesso */
+    .stile-4 {
+      width: 300px;
+      position: relative;
+    }
+    .stile-4::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(255, 255, 255, 0.5));
+      transform: scaleY(-1);
+      opacity: 0.5;
+    }
+
+    /* Stile 5: Effetto rilievo */
+    .stile-5 {
+      border: 5px solid #ccc;
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+      width: 300px;
+    }
+
+    /* Stile 6: Cornice ellittica */
+    .stile-6 {
+      border-radius: 50%;
+      border: 5px solid #000;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Stile 1: Bordi arrotondati con ombra</h2>
+  <img src="Strogar.jpg" alt="Immagine con stile 1" class="stile-1">
+
+  <h2>Stile 2: Cornice con bordo doppio</h2>
+  <img src="Strogar.jpg" alt="Immagine con stile 2" class="stile-2">
+
+  <h2>Stile 3: Ombra profonda</h2>
+  <img src="Strogar.jpg" alt="Immagine con stile 3" class="stile-3">
+
+  <h2>Stile 4: Effetto riflesso</h2>
+  <div class="stile-4">
+    <img src="Strogar.jpg" alt="Immagine con stile 4">
+  </div>
+
+  <h2>Stile 5: Effetto rilievo</h2>
+  <img src="Strogar.jpg" alt="Immagine con stile 5" class="stile-5">
+
+  <h2>Stile 6: Cornice ellittica</h2>
+  <img src="Strogar.jpg" alt="Immagine con stile 6" class="stile-6">
+
+</body>
+</html>

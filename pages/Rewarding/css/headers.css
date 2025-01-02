@@ -1,0 +1,204 @@
+.medium_size {
+				
+		margin-right:2vw;
+		width:12vw;
+		border-radius:5px;
+		float:left;
+	
+}
+
+.large_size {
+				
+		margin-right:2vw;
+		width:28vw;
+		border-radius:5px;
+		float:left;
+	
+}
+
+.img_quest {
+				
+		margin-right:0.5vw;
+		width:13vw;
+		border-radius:5px;
+		box-shadow: -5px 5px 5px 5px #6d8a9e;
+		border: 2px solid orange;
+	
+}
+.img_quest_small {
+				
+		margin-right:0.5vw;
+		width:8vw;
+		border-radius:5px;
+		box-shadow: -5px 5px 5px 5px #6d8a9e;
+		border: 2px solid orange;
+	
+}
+
+.thumb_pers {
+				
+		margin:0 auto;
+		width:5vw;
+		border-radius:5px;
+	
+}
+
+
+.scelta_personaggio {
+	color:inherit !important;
+	text-decoration:none;
+}
+.scelta_personaggio:hover {
+	text-decoration:none !important;
+}
+.card_descr {
+}
+.card_descr:hover {
+	box-shadow:1px 1px 2px 1px #6a43f4;
+}
+.descrizione_cards {
+	font-size:1.3vw;
+}
+
+.internal_card {
+	font-size:1.8vw;
+	width:100%;
+	text-align:center;
+	padding-top:3vh;
+}
+
+.big_heart{
+		font-size:4vh;
+}
+
+.poteri_cards {
+	margin-left:0.3vw;
+	padding-left:0.3vw;
+}
+.img_card_potere {
+	margin:0 auto;
+	width:5vw;
+	border-radius:5px;
+	border:1px solid black;
+	box-shadow: -2px 2px 4px 2px grey;
+	
+}
+
+
+.text-red-900 {
+  color: #f51302 !important;
+}
+.text-red-400 {
+  color: #fa9da2 !important;
+}
+.text-yellow-900 {
+  color: #fcb503 !important;
+}
+
+/* Stile WordArt per un numero */
+.number-wordart-voto-positivo {
+    font-size: 6vh; /* Dimensione grande per il numero */
+    font-weight: bold; /* Grassetto per enfatizzare */
+    color: #ffffff; /* Colore di base */
+    background: linear-gradient(45deg, #34ab54, #34ef54); /* Gradiente colorato blu */
+    -webkit-background-clip: text; /* Clip il gradiente al testo */
+    -webkit-text-fill-color: transparent; /* Rendi il riempimento del testo trasparente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), /* Ombra leggera */
+                 4px 4px 8px rgba(0, 0, 0, 0.2); /* Effetto 3D */
+    transform: rotate(-5deg); /* Rotazione leggera per un tocco stiloso */
+    text-align: center; /* Centrare il testo */
+}
+/* Stile WordArt per un numero */
+.number-wordart-voto-medio {
+    font-size: 6vh; /* Dimensione grande per il numero */
+    font-weight: bold; /* Grassetto per enfatizzare */
+    color: #ffffff; /* Colore di base */
+    background: linear-gradient(45deg, #ebd91c, #e6d200); /* Gradiente colorato blu */
+    -webkit-background-clip: text; /* Clip il gradiente al testo */
+    -webkit-text-fill-color: transparent; /* Rendi il riempimento del testo trasparente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), /* Ombra leggera */
+                 4px 4px 8px rgba(0, 0, 0, 0.2); /* Effetto 3D */
+    transform: rotate(-5deg); /* Rotazione leggera per un tocco stiloso */
+    text-align: center; /* Centrare il testo */
+}
+/* Stile WordArt per un numero */
+.number-wordart-voto-negativo {
+    font-size: 6vh; /* Dimensione grande per il numero */
+    font-weight: bold; /* Grassetto per enfatizzare */
+    color: #ffffff; /* Colore di base */
+    background: linear-gradient(45deg, #d42417, #c41104); /* Gradiente colorato blu */
+    -webkit-background-clip: text; /* Clip il gradiente al testo */
+    -webkit-text-fill-color: transparent; /* Rendi il riempimento del testo trasparente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), /* Ombra leggera */
+                 4px 4px 8px rgba(0, 0, 0, 0.2); /* Effetto 3D */
+    transform: rotate(-5deg); /* Rotazione leggera per un tocco stiloso */
+    text-align: center; /* Centrare il testo */
+}
+
+/* Stile WordArt per un numero */
+.number-wordart {
+    font-size: 72px; /* Dimensione grande per il numero */
+    font-weight: bold; /* Grassetto per enfatizzare */
+    color: #ffffff; /* Colore di base */
+    background: linear-gradient(45deg, #6ecaff, #738ef5); /* Gradiente colorato blu */
+    -webkit-background-clip: text; /* Clip il gradiente al testo */
+    -webkit-text-fill-color: transparent; /* Rendi il riempimento del testo trasparente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), /* Ombra leggera */
+                 4px 4px 8px rgba(0, 0, 0, 0.2); /* Effetto 3D */
+    transform: rotate(-5deg); /* Rotazione leggera per un tocco stiloso */
+    text-align: center; /* Centrare il testo */
+}
+
+/* Opzione per aggiungere un bordo animato */
+.number-wordart:hover {
+    animation: glow 1s infinite alternate; /* Animazione al passaggio del mouse */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+                     4px 4px 8px rgba(0, 0, 0, 0.2),
+                     0 0 10px #6ecaff,
+                     0 0 20px #738ef5;
+    }
+    100% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+                     4px 4px 8px rgba(0, 0, 0, 0.2),
+                     0 0 20px #6ecaff,
+                     0 0 30px #738ef5;
+    }
+}
+
+  /* Stile per l'area di drop */
+    #dropzoneArea {
+        width: 100%;
+        height: 200px;
+        margin: 20px auto;
+        background-color: #e0f7fa; /* Sfondo azzurro */
+        border: 2px dashed #00acc1; /* Bordi tratteggiati */
+        border-radius: 15px; /* Bordi arrotondati */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black; /* Testo verde scuro */
+        font-family: Arial, sans-serif;
+        text-align: center;
+        transition: background-color 0.3s, border-color 0.3s; /* Effetti di transizione */
+    }
+
+    /* Stile quando un file viene trascinato sopra l'area */
+    #dropzoneArea.dz-drag-hover {
+        background-color: #b2ebf2; /* Cambia sfondo */
+        border-color: #00838f; /* Cambia colore del bordo */
+    }
+
+    /* Stile dei link per rimuovere i file */
+    .dz-remove {
+        color: black;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .dz-remove:hover {
+        color: black;
+    }
