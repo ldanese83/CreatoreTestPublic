@@ -1,5 +1,7 @@
 <?php 
 
+include __DIR__.'/../config.inc.php';
+
 function delta_tempo ($data_iniziale,$data_finale,$unita) {
  
  $data1 = strtotime($data_iniziale);
@@ -26,11 +28,7 @@ function truncate($val, $f="0")
 
 //funzione per connettersi ad un database: ritorna l'handler al database, funziona in concomitanza con config.php per i parametri del db
 function connettiDB() {
-	//localhost
-	$db_host="127.0.0.1";
-	$db_name="creatoretest2";
-	$db_user="root";
-	$db_password="";
+	global $db_host, $db_name, $db_user, $db_password;
 	
 	$conn = new mysqli($db_host, $db_user, $db_password, $db_name);
 
@@ -45,13 +43,8 @@ function connettiDB() {
 
 //funzione per connettersi ad un database usando PDO
 function connettiDBPDO() {
-	//localhost
-	$db_host="127.0.0.1";
-	$db_name="creatoretest2";
-	$db_user="root";
-	$db_password="";
-	
-	
+	global $db_host, $db_name, $db_user, $db_password;
+
 	try {
 	  $conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);
 	  // set the PDO error mode to exception
