@@ -116,8 +116,7 @@
 					<div id="collapsePowers" class="collapse" aria-labelledby="headingPowers"
 						data-parent="#accordionSidebar">
 						<div class="bg-white py-2 collapse-inner rounded">
-							<a class="collapse-item" href="utilities-color.html">Vedi Poteri</a>
-							<a class="collapse-item" href="utilities-color.html">Importa Poteri</a>
+							<a class="collapse-item" href="all_powers.php">Vedi Poteri</a>
 						</div>
 					</div>
 				</li>
@@ -132,8 +131,23 @@
 					<div id="collapseCharacters" class="collapse" aria-labelledby="headingCharacters"
 						data-parent="#accordionSidebar">
 						<div class="bg-white py-2 collapse-inner rounded">
-							<a class="collapse-item" href="utilities-color.html">Vedi Personaggi</a>
-							<a class="collapse-item" href="utilities-color.html">Importa Personaggi</a>
+							<a class="collapse-item" href="all_personaggi.php">Vedi Personaggi</a>
+						</div>
+					</div>
+				</li>
+				
+				<!-- Nav Item - Utilities Collapse Menu -->
+				<li class="nav-item">
+					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePledges"
+						aria-expanded="true" aria-controls="collapsePledges">
+						<i class="fas fa-fw fa-skull"></i>
+						<span>Punizioni</span>
+					</a>
+					<div id="collapsePledges" class="collapse" aria-labelledby="headingPledges"
+						data-parent="#accordionSidebar">
+						<div class="bg-white py-2 collapse-inner rounded">
+							<a class="collapse-item" href="all_punizioni.php">Vedi Punizioni</a>
+							<a class="collapse-item" href="punizioni_assegnate.php">Punizioni assegnate</a>
 						</div>
 					</div>
 				</li>

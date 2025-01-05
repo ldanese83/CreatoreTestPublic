@@ -84,7 +84,7 @@
 				</li>
 				<!-- Nav Item - Charts -->
 				<li class="nav-item">
-					<a class="nav-link" href="classmates.php">
+					<a class="nav-link" href="student_powers.php">
 						<i class="fas fa-fw fa-bolt"></i>
 						<span>I miei poteri</span></a>
 				</li>

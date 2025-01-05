@@ -35,6 +35,10 @@ $row_count=eseguiQueryPrepareOne("select count(*) as tot from ct_alerts where fk
 					echo "<div class=\"icon-circle bg-success\">";
 					echo "<i class=\"fas fa-donate text-white\"></i></div>";
 					break;
+				case "UsatoPotere":
+					echo "<div class=\"icon-circle bg-secondary\">";
+					echo "<i class=\"fas fa-bolt text-white\"></i></div>";
+					break;
 					
 			}
 			echo "</div>";

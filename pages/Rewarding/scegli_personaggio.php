@@ -33,7 +33,7 @@ if (!isset($_SESSION['Username']))
 			$row_stud=eseguiQueryPrepareOne($query_stud,$params);
 			
 			$params=[$id_personaggio,$row_stud["id_studente"]];
-			eseguiUpdatePrepare("UPDATE ct_studenti SET fk_personaggio=:c0,vite=(select vita_iniziale from ct_personaggi where id_personaggio=:c0) WHERE id_studente=:c1",$params);
+			eseguiUpdatePrepare("UPDATE ct_studenti SET fk_personaggio=:c0,vite=(select vita_iniziale from ct_personaggi where id_personaggio=:c0),mana=(select mana_iniziale from ct_personaggi where id_personaggio=:c0) WHERE id_studente=:c1",$params);
 			
 			header("location:classe_studente.php");
 			

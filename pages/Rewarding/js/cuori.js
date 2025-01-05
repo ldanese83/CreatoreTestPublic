@@ -1,9 +1,20 @@
-function read_alert(id_alert,link_page) {
+function aggiornaModal(id_studente,nome,cognome) {
+	
+	document.getElementById("id_studente").value=id_studente;
+	document.getElementById("nome_tc").innerHTML=nome;
+	document.getElementById("cognome_tc").innerHTML=cognome;
+	//console.log("ciao"+nome+cognome);
+	
+}
+
+function togli_cuore() {
+	id_studente_mod=document.getElementById("id_studente").value;
+	motivazione_mod=document.getElementById("motivazione").value;
 
 	//make an AJAX call to retrieve the file with ingredients
 	$.ajax({
 		type: "GET",
-		url: "alert_read.php?id_alert="+id_alert,
+		url: "togli_cuore.php?id_studente="+id_studente_mod+"&motivazione="+motivazione_mod,
 		dataType: "text",
 		//function called when the AJAX call is completed
 		complete: function (XHR, textStatus) {
@@ -20,39 +31,13 @@ function read_alert(id_alert,link_page) {
 					return;
 				} // if
 				//normalize the XML document retreived, erasing white spaces and tabs
-				if(link_page!="")
-					window.location.href=link_page;
+				//alert(XHR.responseText);
+				alert("Cuore tolto allo studente!");
+				location.reload(true);
 				
 			} // else
 		} // complete
 
 	});//ajax
-
-		
-}
-
-function elimina_alert(id_alert) {
-	var result= confirm("Sei sicuro di voler eliminare l'alert selezionato?");
-	if(result==true) {
-		let formData = new FormData();
-		formData.append('id_alert', id_alert);
-
-		
-		//make an AJAX call to retrieve the file with ingredients
-		let xhr = new XMLHttpRequest();
-		xhr.open('POST', 'elimina_alert.php', true);
-
-		// Aggiungere un gestore eventi per la risposta del server
-		xhr.onload = function () {
-			if (xhr.status === 200) {
-				alert(xhr.responseText);
-				location.reload(true);
-			} else {
-				alert('Errore nella eliminazione dell\' alert');
-			}
-		};
-
-		xhr.send(formData);
-	}
 	
 }

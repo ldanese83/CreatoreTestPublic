@@ -41,7 +41,9 @@ if (!isset($_SESSION['Username']))
 				$row=eseguiQueryPrepareOne($query,$params);
 
 ?>
-			<script type="text/javascript" src="./js/cuori.js"></script>
+
+			<script src="../../ckeditor/ckeditor.js" ></script>
+			<script type="text/javascript" src="./js/mod_punizioni.js"></script>
 			<!-- Content Wrapper -->
 			<div id="content-wrapper" class="d-flex flex-column">
 
@@ -197,10 +199,8 @@ if (!isset($_SESSION['Username']))
 
 						<!-- Page Heading -->
 						<div class="d-sm-flex align-items-center justify-content-between mb-4">
-							<h1 class="h3 mb-0 text-gray-800">Studenti della classe: <strong><?php echo $row["nome_classe"]."</strong> <span style='font-size:12pt;font-style: italic;'>anno "
-							.$row["anno_scolastico"]; ?></span></h1>
+							<h1 class="h3 mb-0 text-gray-800">Tutti gli alert:</span></h1>
 						</div>
-
 						
 
 						
@@ -208,75 +208,60 @@ if (!isset($_SESSION['Username']))
 						<!-- DataTales Example -->
 						<div class="card shadow mb-4">
 							<div class="card-header py-3">
-								<h6 class="m-0 font-weight-bold text-primary">Studenti</h6>
+								<h6 class="m-0 font-weight-bold text-primary">All alerts</h6>
 							</div>
 							<div class="card-body">
 								<div class="table-responsive">
 									<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 										<thead>
 											<tr>
-												<th style="width:15%">Cognome</th>
-												<th style="width:15%">Nome</th>
-												<th style="width:15%">Vite a disposizione</th>
-												<th style="width:5%">Livello</th>
-												<th style="width:15%">Al prossimo livello</th>
-												<th style="width:10%">Personaggio</th>
-												<th style="width:10%">Togli 1 cuore</th>
+												<th style="width:80%">Alert</th>
+												<th style="width:10%">Data</th>
+												<th style="width:10%">Elimina</th>
 											</tr>
 										</thead>
 										<tfoot>
 											<tr>
-												<th>Cognome</th>
-												<th>Nome</th>
-												<th>Vite a disposizione</th>
-												<th>Livello</th>
-												<th>Al prossimo livello</th>
-												<th>Personaggio</th>
-												<th>Togli 1 cuore</th>
+												<th style="width:80%">Alert</th>
+												<th style="width:10%">Data</th>
+												<th style="width:10%">Elimina</th>
 											</tr>
 										</tfoot>
 										<tbody>
 										<?php
 											$params = [["value"=>$id_classe]];
-											$resultset=eseguiQueryPrepareMany("select * from ((ct_studenti inner join ct_utenti on ct_utenti.id_utente=ct_studenti.fk_utente) inner join ct_studenti_classi on fk_studente=id_studente) left join ct_personaggi on fk_personaggio=id_personaggio where fk_classe=? order by cognome",$params);
-											foreach($resultset as $row_s) {
+											$resulta=eseguiQueryPrepareMany("select * from ct_alerts where fk_classe=? and doc_stud=0 order by data_alert DESC",$params);
+											foreach($resulta as $rowa) {
 												echo "<tr>";
-												echo "<td>$row_s[cognome]</td>";
-												echo "<td>$row_s[nome]</td>";
-												if($row_s["fk_personaggio"]==0) {
-													
-													echo "<td><div class='alert alert-danger'>Da scegliere</div></td>";
-													echo "<td><div class='alert alert-danger'>0</div></td>";
-													echo "<td><div class='alert alert-danger'>//</div></td>";
-													echo "<td><div class='alert alert-danger'>//</div></td>";
-													echo "<td><div class='alert alert-danger'>//</div></td>";
+												echo "<td>";
+												echo "<div class=\"mr-3\">";
+												switch($rowa["tipologia"]) {
 												
+													case "Esercizi":
+														echo "<div class=\"icon-circle bg-success\" style='float:left;margin-right:1vw'>";
+														echo "<i class=\"fas fa-donate text-white\"></i></div>";
+														break;
+													case "UsatoPotere":
+														echo "<div class=\"icon-circle bg-secondary\" style='float:left;;margin-right:1vw'>";
+														echo "<i class=\"fas fa-bolt text-white\"></i></div>";
+														break;
+														
 												}
-												else {
-													echo "<td>";
-													for($i=1;$i<=$row_s["vita_iniziale"];$i++) {
-														if($row_s["vite"]>=$i) {
-															echo "<i class='fas fa-heart fa-sm fa-fw mr-2 text-red-900'></i>";
-														}
-														else {
-															echo "<i class='fas fa-heart fa-sm fa-fw mr-2 text-red-400'></i>";
-														}
-													}	
-													echo "</td>";
-													echo "<td>$row_s[livello]</td>";
-													$punti_nuovo_lvl = pow(1.2,$row_s["livello"])*150;
-													$da_togliere = 0;
-													for($j=1;$j<$row_s["livello"];$j++) {
-														$da_togliere+=pow(1.2,$j)*150;
-													}
-													$xp_livello=$row_s["xp"]-$da_togliere;
-													$percent=floor($xp_livello/$punti_nuovo_lvl*100);
-													echo "<td><div class=\"progress\" role=\"progressbar\" aria-label=\"Animated striped example\" aria-valuenow=\"$percent\" aria-valuemin=\"0\" aria-valuemax=\"100\"><div class=\"progress-bar progress-bar-striped bg-warning\" style=\"width: $percent%\"></div></div></td>";
-													echo "<td style=\"text-align:center;\"><img style= \"border:1px solid $row_s[bordercolor];box-shadow: 2px 2px 4px 2px $row_s[color];\" src=\"$row_s[immagine]\" class=\"thumb_pers\"></td>";
-													echo "<td style=\"text-align:center;\"><a href=\"#\"  data-toggle='modal' data-target='#togliCuoreModal' onclick=\"aggiornaModal($row_s[id_studente],'$row_s[nome]','$row_s[cognome]')\" class=\"btn btn-danger btn-circle btn-lg\"><i class=\"fas fa-skull\"></i></a></td>";
-												}
+												echo "</div>";
+												echo "<div>";
+												echo "<span class=\"font-weight-bold\">".html_entity_decode($rowa["testo"])."</span>";
+												$phpdate = strtotime( $rowa["data_alert"] ); 
+												
+												echo "</div></td><td>";
+												echo date("Y-m-d H:i",$phpdate);
+												echo "</td>";
+												
+												echo "<td style=\"text-align:center;\"><a href=\"#\" class=\"d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm\" onclick=\"elimina_alert($rowa[id_alert]);\" >Elimina</a></td>";
+												
 												echo "</tr>";
+												
 											}
+											
 											?>
 											
 											
@@ -313,32 +298,24 @@ if (!isset($_SESSION['Username']))
 		</a>
 
 		<!-- Togli cuore Modal-->
-		<div class="modal fade" id="togliCuoreModal" tabindex="-1" role="dialog" aria-labelledby="togliCuoreModallab"
+		<div class="modal fade" id="addPunizioneModal" tabindex="-1" role="dialog" aria-labelledby="addPunizioneModall"
 			aria-hidden="true">
 			<div class="modal-dialog modal-lg" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="togliCuoreModalLabel">Togli un cuore a <span id="nome_tc"></span>
-						<span id="cognome_tc"></span></h5>
+						<h5 class="modal-title" id="addPunizioneModallab">Modifica punizione</h5>
 						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">×</span>
 						</button>
 					</div>
 				  <div class="modal-body">
-					<div id="mod_cuori">
-						<div class='row'>
-						<div class='col-md-12' style='padding-top:10px'>
-						<label for='motivazione'>Motivazione</label></div>
-						<div class='col-md-12' style='padding-top:10px'>
-						<input style='width:100%' type='text' id='motivazione' />
-						<input type='hidden' id='id_studente' value="0" />
-						</div>
-						</div>
+					<div id="mod_punizione">
+
 					</div>
 				  </div>
 				  <div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" onclick="togli_cuore();">Salva</button>
+					<button type="button" class="btn btn-primary" onclick="update_punizione();">Salva</button>
 				  </div>
 				</div>
 			</div>

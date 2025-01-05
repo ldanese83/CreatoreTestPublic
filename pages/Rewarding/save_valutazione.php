@@ -10,6 +10,10 @@ if (!isset($_SESSION['Username']))
 {
  echo "Non hai i permessi per accedere alla pagina";
 }else {
+	//scatti di livello per acquisire nuovi poteri
+	scatti=[3,7,12,15,18,22,25,30,35,40,45,50,55,60];
+	
+	
 	$id_utente = $_SESSION["id_utente"];
 	$id_classe=$_SESSION["id_classe"];
 	extract($_POST);
@@ -87,18 +91,27 @@ if (!isset($_SESSION['Username']))
 	}
 	if($livello>$row3["livello"]) {
 		$params=[$id_studente]; 
-		$query="update ct_studenti set livello=livello+1 where id_studente=:c0";
+		$query="update ct_studenti set livello=livello+1,mana=greatest(mana+1,(select mana_iniziale from ct_personaggi where id_personaggio=fk_personaggio)) where id_studente=:c0";
 		eseguiUpdatePrepare($query,$params);
 		
 		$link="classe_studente.php";
-
-		$alert="Il tuo personaggio è salito al livello $livello!";
+		$alert="Il tuo personaggio è salito al livello $livello! Si ricarica 1 mana.";
+		
+		//controllo se acquisisce un nuovo potere
+		if(in_array($livello,$scatti)) {
+			$params=[$id_studente]; 
+			$query="update ct_studenti set pot_da_scegliere=pot_da_scegliere+1 where id_studente=:c0";
+			eseguiUpdatePrepare($query,$params);
+			$alert="Il tuo personaggio è salito al livello $livello! Si ricarica 1 mana. <br />Puoi scegliere un nuovo potere!";
+		}
+		
+		
 		$params=[$id_classe,$alert,$id_studente,$data_odierna,"SaliLivello",$link,0,1];
 		eseguiInsertPrepare("insert into ct_alerts(fk_classe,testo,fk_studente,data_alert,tipologia,link,letto,doc_stud) values ",$params);
 		
 	}
 	
-	//controllo se acquisisce un nuovo potere
+	
 	
 	check_badges();
 			
