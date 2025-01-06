@@ -2617,8 +2617,8 @@ CREATE TABLE `ct_utenti` (
 --
 
 INSERT INTO `ct_utenti` (`id_utente`, `nome`, `cognome`, `username`, `password`, `email`, `codice_conf`, `validato`, `fk_tipo_utente`, `ricevi_mail`) VALUES
-(1, 'Mario', 'Rossi', 'mrossi0', '21232f297a57a5a743894a0e4a801fc3', '', '0', 1, 3, 0),
-(3, 'admin', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', '', 'uMEoH598', 1, 1, 0),
+(1, 'admin', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', '', '0', 1, 3, 0),
+(3, 'Anna', 'Bianchi', 'abianchi', '21232f297a57a5a743894a0e4a801fc3', '', 'uMEoH598', 1, 1, 0),
 (4, 'Mario', 'Rossi', 'mrossi', '91df625035814d6c12d22cbc960b9ba90fb2b247', '1234@dalcero.edu.it', '', 1, 2, 0),
 (5, 'Luigi', 'Verdi', 'lverdi', '977b76f1563bde9effa8fde553ff40967e4a7e1e', '2433545@dalcero.edu.it', '', 1, 2, 0),
 (7, 'Carlo', 'Gialli', 'cgialli', '872e029451d09b5a5a8ae781e53dbb1ddbc5da29', '45458@dalcero.edu.it', '', 1, 2, 0);
